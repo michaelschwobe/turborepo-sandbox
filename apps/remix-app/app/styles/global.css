@@ -1,0 +1,7 @@
+:root {
+  --bg-test: hotpink;
+}
+
+body {
+  background-color: var(--bg-test);
+}

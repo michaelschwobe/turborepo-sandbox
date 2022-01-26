@@ -1,0 +1,13 @@
+{
+  "extends": "@acme/config/tsconfig.remix.json",
+
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["build", "coverage", "dist", "node_modules"],
+
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./app/*"]
+    }
+  }
+}

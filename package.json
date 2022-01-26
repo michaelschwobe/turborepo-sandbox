@@ -1,0 +1,77 @@
+{
+  "name": "turborepo-sandbox",
+  "description": "An opinionated monorepo template/starting point",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "author": "Michael Schwobe <mschwobe@gmail.com> (http://michaelschwobe.com)",
+  "repository": "github:michaelschwobe/turborepo-sandbox",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "turbo run clean && rm -rf node_modules",
+    "postinstall": "turbo run postinstall",
+    "lint": "turbo run lint",
+    "format": "turbo run format --parallel",
+    "test": "turbo run test",
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build"
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=16 <17"
+  },
+  "turbo": {
+    "baseBranch": "origin/main",
+    "pipeline": {
+      "clean": {
+        "cache": false
+      },
+      "postinstall": {
+        "cache": false
+      },
+      "lint": {
+        "dependsOn": [
+          "build"
+        ],
+        "outputs": []
+      },
+      "format": {
+        "cache": false
+      },
+      "test": {
+        "dependsOn": [
+          "build"
+        ],
+        "outputs": [
+          "coverage/**"
+        ]
+      },
+      "dev": {
+        "cache": false
+      },
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "dist/**"
+        ]
+      },
+      "remix-app#build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          ".cache/**",
+          "build/**",
+          "public/build/**"
+        ]
+      }
+    }
+  }
+}

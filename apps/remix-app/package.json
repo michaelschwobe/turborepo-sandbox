@@ -1,0 +1,53 @@
+{
+  "name": "remix-app",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .cache && rm -rf .turbo && rm -rf build && rm -rf coverage && rm -rf dist && rm -rf public/build && rm -rf node_modules",
+    "postinstall": "remix setup node",
+    "lint": "yarn run lint:types && yarn run lint:scripts && yarn run lint:styles",
+    "lint:types": "tsc --noEmit",
+    "lint:scripts": "TIMING=1 eslint app --fix",
+    "lint:styles": "stylelint 'app/**/*.css' --allow-empty-input --fix --formatter=verbose",
+    "format": "prettier '**/*' --write --ignore-unknown",
+    "test": "jest --ci --coverage --passWithNoTests",
+    "test:watch": "jest --watch",
+    "dev": "remix dev",
+    "build": "remix build",
+    "start": "remix-serve build"
+  },
+  "dependencies": {
+    "@acme/core": "*",
+    "@remix-run/react": "^1.1.3",
+    "@remix-run/serve": "^1.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.1.3"
+  },
+  "devDependencies": {
+    "@acme/config": "*",
+    "@remix-run/dev": "^1.1.3",
+    "@types/jest": "^27.4.0",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "eslint": "^8.7.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1",
+    "stylelint": "^14.3.0",
+    "typescript": "^4.5.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "sideEffects": false
+}

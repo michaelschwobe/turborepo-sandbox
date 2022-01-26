@@ -1,0 +1,5 @@
+{
+  "extends": "@acme/config/tsconfig.react-library.json",
+  "include": ["."],
+  "exclude": ["coverage", "dist", "node_modules"]
+}

@@ -1,0 +1,10 @@
+# testing
+coverage
+
+# production
+build
+dist
+out
+public/build
+public/dist
+storybook-static

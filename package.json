@@ -81,6 +81,15 @@
           "build/**",
           "public/build/**"
         ]
+      },
+      "vite-app#build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "dist/**",
+          "dist-ssr/**"
+        ]
       }
     }
   }

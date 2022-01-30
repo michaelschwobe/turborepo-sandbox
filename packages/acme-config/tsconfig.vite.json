@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Vite",
+
+  "extends": "./tsconfig.base.json",
+
+  "compilerOptions": {
+    "module": "ESNext",
+    "resolveJsonModule": true,
+
+    "noEmit": true,
+
+    "allowJs": false,
+
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": false,
+
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "useDefineForClassFields": true,
+
+    "skipLibCheck": false
+  }
+}

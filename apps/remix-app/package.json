@@ -8,7 +8,7 @@
     "postinstall": "remix setup node",
     "lint": "yarn run lint:types && yarn run lint:scripts && yarn run lint:styles",
     "lint:types": "tsc --noEmit",
-    "lint:scripts": "TIMING=1 eslint app --fix",
+    "lint:scripts": "TIMING=1 eslint app --ext=.js,.jsx,.ts,.tsx --fix",
     "lint:styles": "stylelint 'app/**/*.css' --allow-empty-input --fix --formatter=verbose",
     "format": "prettier '**/*' --write --ignore-unknown",
     "test": "jest --ci --coverage --passWithNoTests",

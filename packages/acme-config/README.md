@@ -13,6 +13,7 @@ A collection of configurations:
 - `@acme/config/tsconfig.nextjs`
 - `@acme/config/tsconfig.react-library`
 - `@acme/config/tsconfig.remix`
+- `@acme/config/tsconfig.vite`
 
 ## Installation:
 

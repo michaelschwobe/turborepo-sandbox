@@ -1,0 +1,51 @@
+{
+  "name": "cra-app",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf build && rm -rf coverage && rm -rf node_modules",
+    "lint": "yarn run lint:types && yarn run lint:scripts && yarn run lint:styles",
+    "lint:types": "tsc --noEmit",
+    "lint:scripts": "TIMING=1 eslint src --ext=.js,.jsx,.ts,.tsx --fix",
+    "lint:styles": "stylelint 'src/**/*.css' --allow-empty-input --fix --formatter=verbose",
+    "format": "prettier '**/*' --write --ignore-unknown",
+    "test": "CI=true react-scripts test --ci --clearMocks --coverage --passWithNoTests --watchAll=false",
+    "test:watch": "react-scripts test --clearMocks",
+    "dev": "PORT=3100 react-scripts start",
+    "build": "react-scripts build",
+    "start": "react-scripts start"
+  },
+  "dependencies": {
+    "@acme/core": "*",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0"
+  },
+  "devDependencies": {
+    "@acme/config": "*",
+    "@remix-run/dev": "^1.1.3",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.13",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "eslint": "^8.8.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1",
+    "stylelint": "^14.3.0",
+    "typescript": "^4.5.5",
+    "web-vitals": "^2.1.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

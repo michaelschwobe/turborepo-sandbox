@@ -25,6 +25,10 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "cra-app#build": {
+      "dependsOn": ["^build"],
+      "outputs": ["build/**"]
+    },
     "next-app#build": {
       "dependsOn": ["^build"],
       "outputs": [".next/**", "build/**", "out/**"]

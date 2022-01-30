@@ -1,0 +1,14 @@
+{
+  "extends": "@acme/config/tsconfig.react-library.json",
+
+  "include": ["src/react-app-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["build", "coverage", "node_modules"],
+
+  "compilerOptions": {
+    "resolveJsonModule": true,
+
+    "noEmit": true,
+
+    "allowJs": true
+  }
+}

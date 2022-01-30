@@ -13,7 +13,7 @@
     "format": "prettier '**/*' --write --ignore-unknown",
     "test": "jest --ci --coverage --passWithNoTests",
     "test:watch": "jest --watch",
-    "dev": "remix dev",
+    "dev": "PORT=3300 remix dev",
     "build": "remix build",
     "start": "remix-serve build"
   },

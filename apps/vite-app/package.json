@@ -10,7 +10,7 @@
     "lint:scripts": "TIMING=1 eslint src --ext=.js,.jsx,.ts,.tsx --fix",
     "lint:styles": "stylelint 'src/**/*.css' --allow-empty-input --fix --formatter=verbose",
     "format": "prettier '**/*' --write --ignore-unknown",
-    "dev": "vite --port 3002",
+    "dev": "vite --port=3400",
     "build": "vite build",
     "preview": "vite preview"
   },

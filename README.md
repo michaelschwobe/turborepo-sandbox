@@ -13,6 +13,6 @@ Private/publishable standalone packages.
 
 Applications utilizing private/published configurations and packages.
 
-- [next-app](./apps/remix-app/README.md)
+- [next-app](./apps/next-app/README.md)
 - [remix-app](./apps/remix-app/README.md)
 - [vite-app](./apps/vite-app/README.md)

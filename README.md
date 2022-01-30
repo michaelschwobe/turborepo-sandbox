@@ -13,4 +13,5 @@ Private/publishable standalone packages.
 
 Applications utilizing private/published configurations and packages.
 
+- [next-app](./apps/remix-app/README.md)
 - [remix-app](./apps/remix-app/README.md)

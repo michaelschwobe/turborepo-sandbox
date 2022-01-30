@@ -1,0 +1,6 @@
+{
+  "extends": "@acme/config/tsconfig.nextjs.json",
+
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["build", "coverage", "out", "node_modules"]
+}

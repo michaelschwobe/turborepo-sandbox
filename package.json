@@ -62,6 +62,16 @@
           "dist/**"
         ]
       },
+      "next-app#build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          ".next/**",
+          "build/**",
+          "out/**"
+        ]
+      },
       "remix-app#build": {
         "dependsOn": [
           "^build"

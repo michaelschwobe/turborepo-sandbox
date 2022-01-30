@@ -2,6 +2,8 @@
 coverage
 
 # production
+.next
+.vercel
 build
-public/build
+out
 storybook-static

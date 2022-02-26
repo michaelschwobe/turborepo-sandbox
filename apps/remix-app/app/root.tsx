@@ -7,18 +7,18 @@ import {
   ScrollRestoration,
 } from 'remix';
 
-import globalStyles from '~/styles/global.css';
+import globalStylesUrl from '~/styles/global.css';
 
 import type { LinksFunction, MetaFunction } from 'remix';
 
 // -----------------------------------------------------------------------------
 
 export const meta: MetaFunction = () => {
-  return { title: 'Remix App' };
+  return { title: 'New Remix App' };
 };
 
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: globalStyles }];
+  return [{ rel: 'stylesheet', href: globalStylesUrl }];
 };
 
 // -----------------------------------------------------------------------------

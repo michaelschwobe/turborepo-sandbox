@@ -11,5 +11,7 @@ module.exports = {
 
   framework: '@storybook/react',
 
+  staticDirs: ['../public'],
+
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
 };

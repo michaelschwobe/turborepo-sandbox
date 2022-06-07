@@ -3,8 +3,5 @@
 
   "include": ["src/vite-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["coverage", "dist", "dist-ssr", "node_modules"],
-
-  "compilerOptions": {
-    "skipLibCheck": true
-  }
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

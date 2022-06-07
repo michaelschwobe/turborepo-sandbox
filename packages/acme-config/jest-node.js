@@ -1,5 +1,5 @@
 /**
- * @type {import('ts-jest').InitialOptionsTsJest}
+ * @type {import("ts-jest").InitialOptionsTsJest}
  */
 module.exports = {
   clearMocks: true,

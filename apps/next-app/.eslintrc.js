@@ -6,7 +6,7 @@ module.exports = {
   ...sharedConfig,
   extends: [
     ...sharedConfig.extends.filter((el) => el !== 'prettier'),
-    'plugin:@next/next/recommended',
+    'plugin:@next/next/core-web-vitals',
     'prettier',
   ],
   overrides: [

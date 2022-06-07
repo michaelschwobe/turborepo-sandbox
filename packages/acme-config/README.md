@@ -14,6 +14,7 @@ A collection of configurations:
 - `@acme/config/tsconfig.react-library`
 - `@acme/config/tsconfig.remix`
 - `@acme/config/tsconfig.vite`
+- `@acme/config/tsconfig.vite.node`
 
 ## Installation:
 

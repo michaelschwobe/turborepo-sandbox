@@ -3,52 +3,44 @@
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
+  "sideEffects": false,
   "scripts": {
     "clean": "rm -rf .cache && rm -rf .turbo && rm -rf build && rm -rf coverage && rm -rf dist && rm -rf public/build && rm -rf node_modules",
-    "postinstall": "remix setup node",
     "lint": "yarn run lint:types && yarn run lint:scripts && yarn run lint:styles",
-    "lint:types": "tsc --noEmit",
+    "lint:types": "tsc -b",
     "lint:scripts": "TIMING=1 eslint app --ext=.js,.jsx,.ts,.tsx --fix",
     "lint:styles": "stylelint 'app/**/*.css' --allow-empty-input --fix --formatter=verbose",
     "format": "prettier '**/*' --write --ignore-unknown",
     "test": "jest --ci --coverage --passWithNoTests",
     "test:watch": "jest --watch",
-    "dev": "cross-env NODE_ENV=production PORT=3300 remix dev",
+    "dev": "cross-env NODE_ENV=production PORT=3300 REMIX_DEV_SERVER_WS_PORT=8300 remix dev",
     "build": "cross-env NODE_ENV=production remix build",
-    "start": "cross-env NODE_ENV=production remix-serve build"
+    "start": "remix-serve build"
   },
   "dependencies": {
     "@acme/core": "*",
-    "@remix-run/react": "^1.2.2",
-    "@remix-run/serve": "^1.2.2",
-    "cross-env": "^7.0.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "remix": "^1.2.2"
+    "@remix-run/node": "^1.5.1",
+    "@remix-run/react": "^1.5.1",
+    "@remix-run/serve": "^1.5.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "@acme/config": "*",
-    "@remix-run/dev": "^1.2.2",
-    "@types/jest": "^27.4.1",
-    "@types/react": "^17.0.39",
-    "@types/react-dom": "^17.0.11",
-    "eslint": "^8.10.0",
-    "jest": "^27.5.1",
-    "prettier": "^2.5.1",
-    "stylelint": "^14.5.3",
-    "typescript": "^4.5.5"
+    "@remix-run/dev": "^1.5.1",
+    "@remix-run/eslint-config": "^1.5.1",
+    "@types/jest": "^28.1.1",
+    "@types/react": "^18.0.12",
+    "@types/react-dom": "^18.0.5",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.17.0",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
+    "prettier": "^2.6.2",
+    "stylelint": "^14.8.5",
+    "typescript": "^4.7.3"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "sideEffects": false
+  "engines": {
+    "node": ">=14"
+  }
 }

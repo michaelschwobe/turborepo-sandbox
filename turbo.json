@@ -4,9 +4,6 @@
     "clean": {
       "cache": false
     },
-    "postinstall": {
-      "cache": false
-    },
     "lint": {
       "dependsOn": ["build"],
       "outputs": []
@@ -17,6 +14,9 @@
     "test": {
       "dependsOn": ["build"],
       "outputs": ["coverage/**"]
+    },
+    "storybook": {
+      "cache": false
     },
     "dev": {
       "cache": false

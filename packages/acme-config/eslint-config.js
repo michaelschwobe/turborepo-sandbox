@@ -1,5 +1,5 @@
 /**
- * @type {import('eslint').Linter.Config}
+ * @type {import("eslint").Linter.Config}
  */
 module.exports = {
   root: true,
@@ -88,6 +88,7 @@ module.exports = {
             group: 'internal',
           },
         ],
+        pathGroupsExcludedImportTypes: ['type'],
       },
     ],
     'import/prefer-default-export': 'error',
@@ -121,6 +122,11 @@ module.exports = {
     },
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      settings: {
+        jest: {
+          version: 28,
+        },
+      },
       env: {
         jest: true,
         'jest/globals': true,

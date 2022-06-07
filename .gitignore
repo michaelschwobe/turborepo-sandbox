@@ -44,5 +44,6 @@ yarn-error.log*
 !.vscode/extensions.json
 
 # misc
+*.tsbuildinfo
 .DS_Store
 *.pem

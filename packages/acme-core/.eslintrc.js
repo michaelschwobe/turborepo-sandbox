@@ -1,11 +1,11 @@
-const acmeConfigEslint = require('@acme/config/eslint-config');
+const sharedConfig = require('@acme/config/eslint-config');
 
 // -----------------------------------------------------------------------------
 
 module.exports = {
-  ...acmeConfigEslint,
+  ...sharedConfig,
   overrides: [
-    ...acmeConfigEslint.overrides,
+    ...sharedConfig.overrides,
     {
       files: ['**/*.ts?(x)'],
       parserOptions: {

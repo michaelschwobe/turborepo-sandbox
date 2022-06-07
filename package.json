@@ -12,18 +12,20 @@
   ],
   "scripts": {
     "clean": "turbo run clean && rm -rf node_modules",
-    "postinstall": "turbo run postinstall",
     "lint": "turbo run lint",
     "format": "turbo run format --parallel",
     "test": "turbo run test",
+    "storybook": "turbo run storybook --filter=!@acme/config",
     "dev": "turbo run dev --no-cache --parallel --continue",
     "build": "turbo run build"
   },
+  "dependencies": {},
   "devDependencies": {
     "turbo": "latest"
   },
   "engines": {
-    "node": ">=16 <17"
+    "node": ">=16 <17",
+    "npm": ">=8.0.0"
   },
-  "packageManager": "yarn@1.22.17"
+  "packageManager": "yarn@1.22.19"
 }

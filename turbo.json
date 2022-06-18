@@ -8,9 +8,6 @@
       "dependsOn": ["build"],
       "outputs": []
     },
-    "format": {
-      "cache": false
-    },
     "test": {
       "dependsOn": ["build"],
       "outputs": ["coverage/**"]

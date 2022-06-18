@@ -13,14 +13,14 @@
   "scripts": {
     "clean": "turbo run clean && rm -rf node_modules",
     "lint": "turbo run lint",
-    "format": "turbo run format --parallel",
+    "format": "prettier '**/*' --write --ignore-unknown",
     "test": "turbo run test",
     "storybook": "turbo run storybook --filter=!@acme/config",
     "dev": "turbo run dev --no-cache --parallel --continue",
     "build": "turbo run build"
   },
-  "dependencies": {},
   "devDependencies": {
+    "prettier": "^2.7.0",
     "turbo": "latest"
   },
   "engines": {

@@ -3,13 +3,13 @@ node_modules
 package-lock.json
 pnpm-lock.yaml
 
-# testing
-coverage
-
-# production
+# artifacts
 build
+coverage
 dist
+dist-ssr
 out
 public/build
 public/dist
+server/dist
 storybook-static

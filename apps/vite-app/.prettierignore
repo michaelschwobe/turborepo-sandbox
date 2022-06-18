@@ -1,7 +1,0 @@
-# testing
-coverage
-
-# production
-dist
-dist-ssr
-storybook-static

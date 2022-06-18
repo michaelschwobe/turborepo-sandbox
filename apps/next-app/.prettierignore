@@ -1,9 +1,0 @@
-# testing
-coverage
-
-# production
-.next
-.vercel
-build
-out
-storybook-static

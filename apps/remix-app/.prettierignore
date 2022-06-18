@@ -1,7 +1,0 @@
-# testing
-coverage
-
-# production
-build
-public/build
-storybook-static

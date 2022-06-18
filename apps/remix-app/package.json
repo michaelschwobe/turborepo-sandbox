@@ -10,7 +10,6 @@
     "lint:types": "tsc -b",
     "lint:scripts": "TIMING=1 eslint app --ext=.js,.jsx,.ts,.tsx --fix",
     "lint:styles": "stylelint 'app/**/*.css' --allow-empty-input --fix --formatter=verbose",
-    "format": "prettier '**/*' --write --ignore-unknown",
     "test": "jest --ci --coverage --passWithNoTests",
     "test:watch": "jest --watch",
     "dev": "cross-env NODE_ENV=production PORT=3300 REMIX_DEV_SERVER_WS_PORT=8300 remix dev",
@@ -36,7 +35,6 @@
     "eslint": "^8.17.0",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
-    "prettier": "^2.6.2",
     "stylelint": "^14.8.5",
     "typescript": "^4.7.3"
   },

@@ -9,7 +9,6 @@
     "lint:types": "tsc -b",
     "lint:scripts": "TIMING=1 eslint src --ext=.js,.jsx,.ts,.tsx --fix",
     "lint:styles": "stylelint 'src/**/*.css' --allow-empty-input --fix --formatter=verbose",
-    "format": "prettier '**/*' --write --ignore-unknown",
     "test": "CI=true react-scripts test --ci --clearMocks --coverage --passWithNoTests --watchAll=false",
     "test:watch": "react-scripts test --clearMocks",
     "dev": "PORT=3100 react-scripts start",
@@ -33,7 +32,6 @@
     "@types/react-dom": "^18.0.5",
     "eslint": "^8.17.0",
     "jest": "^28.1.1",
-    "prettier": "^2.6.2",
     "stylelint": "^14.8.5",
     "typescript": "^4.7.3",
     "web-vitals": "^2.1.4"

@@ -5,7 +5,7 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "clean": "rm -rf .cache && rm -rf .turbo && rm -rf build && rm -rf coverage && rm -rf dist && rm -rf public/build && rm -rf node_modules",
+    "clean": "rm -rf .cache && rm -rf .turbo && rm -rf build && rm -rf coverage && rm -rf public/build && rm -rf tsconfig.tsbuildinfo && rm -rf node_modules",
     "lint": "yarn run lint:types && yarn run lint:scripts && yarn run lint:styles",
     "lint:types": "tsc -b",
     "lint:scripts": "TIMING=1 eslint app --ext=.js,.jsx,.ts,.tsx --fix",
@@ -18,25 +18,19 @@
   },
   "dependencies": {
     "@acme/core": "*",
-    "@remix-run/node": "^1.5.1",
-    "@remix-run/react": "^1.5.1",
-    "@remix-run/serve": "^1.5.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "@remix-run/node": "^1.6.0",
+    "@remix-run/react": "^1.6.0",
+    "@remix-run/serve": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@acme/config": "*",
-    "@remix-run/dev": "^1.5.1",
-    "@remix-run/eslint-config": "^1.5.1",
-    "@types/jest": "^28.1.1",
-    "@types/react": "^18.0.12",
-    "@types/react-dom": "^18.0.5",
+    "@remix-run/dev": "^1.6.0",
+    "@remix-run/eslint-config": "^1.6.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.17.0",
-    "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
-    "stylelint": "^14.8.5",
-    "typescript": "^4.7.3"
+    "typescript": "^4.7.4"
   },
   "engines": {
     "node": ">=14"

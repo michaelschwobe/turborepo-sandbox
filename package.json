@@ -15,7 +15,7 @@
     "lint": "turbo run lint",
     "format": "prettier '**/*' --write --ignore-unknown",
     "test": "turbo run test",
-    "storybook": "turbo run storybook --filter=!@acme/config",
+    "storybook": "turbo run storybook",
     "dev": "turbo run dev --no-cache --parallel --continue",
     "build": "turbo run build"
   },

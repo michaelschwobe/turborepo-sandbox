@@ -10,7 +10,7 @@
     "dist/**"
   ],
   "scripts": {
-    "clean": "rm -rf .turbo && rm -rf coverage && rm -rf dist && rm -rf storybook-static && rm -rf node_modules",
+    "clean": "rm -rf .turbo && rm -rf coverage && rm -rf dist && rm -rf storybook-static && rm -rf tsconfig.tsbuildinfo && rm -rf node_modules",
     "lint": "yarn run lint:types && yarn run lint:scripts && yarn run lint:styles",
     "lint:types": "tsc -b",
     "lint:scripts": "TIMING=1 eslint src --fix",
@@ -27,16 +27,7 @@
   },
   "devDependencies": {
     "@acme/config": "*",
-    "@types/jest": "^28.1.1",
-    "@types/react": "^18.0.12",
-    "@types/react-dom": "^18.0.5",
-    "eslint": "^8.17.0",
-    "jest": "^28.1.1",
-    "jest-environment-jsdom": "^28.1.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "stylelint": "^14.8.5",
-    "tsup": "^6.1.0",
-    "typescript": "^4.7.3"
+    "tsup": "^6.1.2",
+    "typescript": "^4.7.4"
   }
 }

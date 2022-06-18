@@ -1,0 +1,20 @@
+{
+  "name": "stylelint-config-acme",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf tsconfig.tsbuildinfo && rm -rf node_modules"
+  },
+  "dependencies": {
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^26.0.0"
+  },
+  "devDependencies": {
+    "stylelint": "^14.9.1"
+  }
+}

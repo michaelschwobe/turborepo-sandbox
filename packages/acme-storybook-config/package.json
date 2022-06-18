@@ -1,0 +1,32 @@
+{
+  "name": "@acme/storybook-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "main.js",
+    "preview.js"
+  ],
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf tsconfig.tsbuildinfo && rm -rf node_modules"
+  },
+  "dependencies": {
+    "@storybook/addon-a11y": "^6.5.9",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/node-logger": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@types/react": "^18.0.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.7.4"
+  }
+}

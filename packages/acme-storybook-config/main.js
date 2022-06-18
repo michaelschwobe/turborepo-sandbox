@@ -1,3 +1,6 @@
+/**
+ * Name: @acme/storybook-config/main
+ */
 module.exports = {
   addons: [
     '@storybook/addon-links',

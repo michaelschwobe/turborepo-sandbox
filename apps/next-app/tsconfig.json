@@ -1,5 +1,5 @@
 {
-  "extends": "@acme/config/tsconfig.nextjs.json",
+  "extends": "@acme/typescript-config/tsconfig.nextjs.json",
 
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["build", "coverage", "out", "node_modules"]

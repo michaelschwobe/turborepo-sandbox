@@ -1,5 +1,5 @@
 import 'stop-runaway-react-effects/hijack';
-import * as sharedConfig from '@acme/config/storybook-preview';
+import * as sharedConfig from '@acme/storybook-config/preview';
 
 // -----------------------------------------------------------------------------
 

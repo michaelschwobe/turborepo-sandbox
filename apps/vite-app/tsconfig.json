@@ -1,5 +1,5 @@
 {
-  "extends": "@acme/config/tsconfig.vite.json",
+  "extends": "@acme/typescript-config/tsconfig.vite.json",
 
   "include": ["src/vite-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["coverage", "dist", "dist-ssr", "node_modules"],

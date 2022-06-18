@@ -26,7 +26,22 @@
     "stop-runaway-react-effects": "^2.0.0"
   },
   "devDependencies": {
-    "@acme/config": "*",
+    "@acme/jest-config": "*",
+    "@acme/storybook-config": "*",
+    "@acme/typescript-config": "*",
+    "@babel/core": "^7.18.5",
+    "@types/jest": "^28.1.2",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "eslint": "^8.18.0",
+    "eslint-config-acme": "*",
+    "eslint-config-prettier": "^8.5.0",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-acme": "*",
     "tsup": "^6.1.2",
     "typescript": "^4.7.4"
   }

@@ -1,4 +1,5 @@
 /**
+ * Name: stylelint-config-acme
  * @type {import("stylelint").Config}
  */
 module.exports = {

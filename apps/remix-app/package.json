@@ -25,11 +25,21 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@acme/config": "*",
+    "@acme/jest-config": "*",
+    "@acme/typescript-config": "*",
+    "@types/jest": "^28.1.2",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
     "@remix-run/dev": "^1.6.0",
     "@remix-run/eslint-config": "^1.6.0",
     "cross-env": "^7.0.3",
+    "eslint": "^8.18.0",
+    "eslint-config-acme": "*",
+    "eslint-config-prettier": "^8.5.0",
+    "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-acme": "*",
     "typescript": "^4.7.4"
   },
   "engines": {

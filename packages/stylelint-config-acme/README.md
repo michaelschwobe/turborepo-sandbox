@@ -1,6 +1,8 @@
-# @acme/core
+# stylelint-config-acme
 
-A collection of React components, hooks, constants and utilities.
+A collection of configurations:
+
+- `stylelint-config-acme`
 
 ## Installation:
 
@@ -12,7 +14,7 @@ If in a turborepo:
 // package.json
 {
   "devDependencies": {
-    "@acme/core": "*"
+    "stylelint-config-acme": "*"
     // ...
   }
 }
@@ -21,21 +23,14 @@ If in a turborepo:
 If NOT in a Turborepo:
 
 ```sh
-yarn add -D @acme/core
+yarn add -D stylelint-config-acme
 ```
 
 ## Usage
 
 Use the package withing the consuming app/lib configuration.
 
-```jsx
-import { Button } from '@acme/core';
-
-export default function App() {
-  return (
-    <div>
-      <Button>Button</Button>
-    </div>
-  );
-}
+```js
+// .stylelintrc.js
+module.exports = require('stylelint-config-acme');
 ```

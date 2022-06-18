@@ -1,24 +1,13 @@
-const sharedConfig = require('@acme/config/eslint-config');
-
-// -----------------------------------------------------------------------------
-
+/**
+ * @type {import("eslint").Linter.Config}
+ */
 module.exports = {
-  ...sharedConfig,
+  root: true,
   extends: [
-    ...sharedConfig.extends.filter((el) => el !== 'prettier'),
+    'acme',
     '@remix-run/eslint-config',
     '@remix-run/eslint-config/node',
     '@remix-run/eslint-config/jest-testing-library',
     'prettier',
-  ],
-  overrides: [
-    ...sharedConfig.overrides,
-    {
-      files: ['**/*.ts?(x)'],
-      parserOptions: {
-        project: './tsconfig.json',
-        tsconfigRootDir: __dirname,
-      },
-    },
   ],
 };

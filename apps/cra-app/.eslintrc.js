@@ -1,17 +1,7 @@
-const sharedConfig = require('@acme/config/eslint-config');
-
-// -----------------------------------------------------------------------------
-
+/**
+ * @type {import("eslint").Linter.Config}
+ */
 module.exports = {
-  ...sharedConfig,
-  overrides: [
-    ...sharedConfig.overrides,
-    {
-      files: ['**/*.ts?(x)'],
-      parserOptions: {
-        project: './tsconfig.json',
-        tsconfigRootDir: __dirname,
-      },
-    },
-  ],
+  root: true,
+  extends: ['acme', 'prettier'],
 };

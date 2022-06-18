@@ -1,5 +1,5 @@
 {
-  "extends": "@acme/config/tsconfig.cra.json",
+  "extends": "@acme/typescript-config/tsconfig.cra.json",
 
   "include": ["src/react-app-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["build", "coverage", "node_modules"]

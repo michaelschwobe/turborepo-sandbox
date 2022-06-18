@@ -1,1 +1,1 @@
-module.exports = require('@acme/config/storybook-main');
+module.exports = require('@acme/storybook-config/main');

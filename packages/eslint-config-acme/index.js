@@ -1,13 +1,12 @@
 /**
+ * Name: eslint-config-acme
  * @type {import("eslint").Linter.Config}
  */
 module.exports = {
-  root: true,
-
   env: {
     browser: true,
     commonjs: true,
-    es2021: true,
+    es2021: true, // Keep paired with parserOptions.ecmaVersion
     node: true,
   },
 
@@ -17,7 +16,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2021,
+    ecmaVersion: 2021, // Keep paired with env.esXXXX
     babelOptions: {
       presets: ['@babel/preset-react'],
     },
@@ -26,9 +25,6 @@ module.exports = {
   },
 
   settings: {
-    react: {
-      version: 'detect',
-    },
     'import/ignore': ['node_modules', '\\.(css|json|md|svg)$'],
     'import/parsers': {
       [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
@@ -40,6 +36,9 @@ module.exports = {
       [require.resolve('eslint-import-resolver-typescript')]: {
         alwaysTryTypes: true,
       },
+    },
+    react: {
+      version: 'detect',
     },
   },
 
@@ -60,11 +59,9 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
-    'prettier',
   ],
 
   rules: {
-    'arrow-body-style': 'off', // prettier conflict
     'import/order': [
       'warn',
       {
@@ -91,10 +88,9 @@ module.exports = {
         pathGroupsExcludedImportTypes: ['type'],
       },
     ],
-    'import/prefer-default-export': 'error',
-    'prefer-arrow-callback': 'off', // prettier conflict
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off',
+    'import/prefer-default-export': 'error', // Prefer named exports
+    'react/prop-types': 'off', // Prefer TS types
+    'react/react-in-jsx-scope': 'off', // Prefer JSX to React JSX
   },
 
   overrides: [
@@ -105,7 +101,8 @@ module.exports = {
         ecmaFeatures: {
           jsx: true,
         },
-        ecmaVersion: 2021,
+        ecmaVersion: 2021, // Keep paired with env.esXXXX
+        project: './tsconfig.json', // Use config local to package not monorepo root
         sourceType: 'module',
         warnOnUnsupportedTypeScriptVersion: true,
       },
@@ -122,17 +119,16 @@ module.exports = {
     },
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-      settings: {
-        jest: {
-          version: 28,
-        },
-      },
       env: {
         jest: true,
         'jest/globals': true,
       },
       plugins: ['jest', 'testing-library'],
-      extends: ['plugin:jest/recommended', 'plugin:testing-library/react'],
+      extends: [
+        'plugin:jest/recommended',
+        'plugin:jest/style',
+        'plugin:testing-library/react',
+      ],
     },
   ],
 };

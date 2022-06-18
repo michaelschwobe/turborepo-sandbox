@@ -11,9 +11,10 @@
   ],
   "scripts": {
     "clean": "rm -rf .turbo && rm -rf coverage && rm -rf dist && rm -rf storybook-static && rm -rf node_modules",
-    "lint": "yarn run lint:types && yarn run lint:scripts",
+    "lint": "yarn run lint:types && yarn run lint:scripts && yarn run lint:styles",
     "lint:types": "tsc -b",
     "lint:scripts": "TIMING=1 eslint src --fix",
+    "lint:styles": "stylelint 'src/**/*.css' --allow-empty-input --fix --formatter=verbose",
     "test": "jest --ci --coverage --passWithNoTests",
     "test:watch": "jest --watch",
     "dev": "tsup src/index.ts --dts --format=esm,cjs --external=react --watch",

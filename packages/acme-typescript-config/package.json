@@ -6,7 +6,7 @@
   "files": [
     "tsconfig.base.json",
     "tsconfig.cra.json",
-    "tsconfig.nextjs.json",
+    "tsconfig.next.json",
     "tsconfig.react-library.json",
     "tsconfig.remix.json",
     "tsconfig.vite.json",

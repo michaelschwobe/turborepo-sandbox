@@ -5,7 +5,7 @@ import type { MetaFunction } from '@remix-run/node';
 // -----------------------------------------------------------------------------
 
 export const meta: MetaFunction = () => {
-  return { title: 'HomePage' };
+  return { title: 'remix-app' };
 };
 
 // -----------------------------------------------------------------------------

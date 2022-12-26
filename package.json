@@ -19,12 +19,13 @@
     "dev": "turbo run dev --no-cache --parallel --continue",
     "build": "turbo run build"
   },
+  "dependencies": {},
   "devDependencies": {
     "prettier": "^2.7.1",
     "turbo": "latest"
   },
   "engines": {
-    "node": ">=16 <17",
+    "node": ">=16",
     "npm": ">=8.0.0"
   },
   "packageManager": "yarn@1.22.19"

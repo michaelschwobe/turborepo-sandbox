@@ -4,7 +4,7 @@ A collection of configurations:
 
 - `@acme/typescript-config/tsconfig.base.json`
 - `@acme/typescript-config/tsconfig.cra.json`
-- `@acme/typescript-config/tsconfig.nextjs.json`
+- `@acme/typescript-config/tsconfig.next.json`
 - `@acme/typescript-config/tsconfig.react-library.json`
 - `@acme/typescript-config/tsconfig.remix.json`
 - `@acme/typescript-config/tsconfig.vite.json`

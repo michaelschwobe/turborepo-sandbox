@@ -12,35 +12,36 @@
     "lint:styles": "stylelint 'app/**/*.css' --allow-empty-input --fix --formatter=verbose",
     "test": "jest --ci --coverage --passWithNoTests",
     "test:watch": "jest --watch",
-    "dev": "cross-env NODE_ENV=production PORT=3300 REMIX_DEV_SERVER_WS_PORT=8300 remix dev",
-    "build": "cross-env NODE_ENV=production remix build",
+    "dev": "remix dev --port=3300",
+    "build": "remix build",
     "start": "remix-serve build"
   },
   "dependencies": {
     "@acme/core": "*",
-    "@remix-run/node": "^1.6.0",
-    "@remix-run/react": "^1.6.0",
-    "@remix-run/serve": "^1.6.0",
+    "@remix-run/node": "^1.9.0",
+    "@remix-run/react": "^1.9.0",
+    "@remix-run/serve": "^1.9.0",
+    "isbot": "^3.6.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@acme/jest-config": "*",
     "@acme/typescript-config": "*",
+    "@remix-run/dev": "^1.9.0",
+    "@remix-run/eslint-config": "^1.9.0",
     "@types/jest": "^28.1.2",
-    "@types/react": "^18.0.14",
-    "@types/react-dom": "^18.0.5",
-    "@remix-run/dev": "^1.6.0",
-    "@remix-run/eslint-config": "^1.6.0",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
     "cross-env": "^7.0.3",
-    "eslint": "^8.18.0",
+    "eslint": "^8.27.0",
     "eslint-config-acme": "*",
     "eslint-config-prettier": "^8.5.0",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
     "stylelint": "^14.9.1",
     "stylelint-config-acme": "*",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.4"
   },
   "engines": {
     "node": ">=14"
